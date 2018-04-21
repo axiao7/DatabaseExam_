@@ -106,6 +106,8 @@ Route::any('url', ['as' => 'url', 'uses' => 'StudentController@urlTest']);
 
 Route::any('upload', 'StudentController@upload');
 
+Route::any('mail', 'StudentController@mail');
+
 
 
 

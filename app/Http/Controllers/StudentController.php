@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 use App\Student;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 
 class StudentController extends Controller {
@@ -257,6 +258,23 @@ class StudentController extends Controller {
             exit;
         }
         return view('student.upload');
+    }
+
+    public function mail () {
+//        Mail::raw('佩奇，你好', function ($message){
+//            $message->from('liuwenxi77@163.com', '小7');
+//            $message->subject('嘿嘿');
+//            $message->to('648515044@qq.com');
+//        });
+        Mail::send('student.mail', [
+            'name' => 'lwx',
+            'age' => 23,
+//            'student' => $student
+        ], function ($message){
+            $message->subject('阔以');
+            $message->to('974820947@qq.com');
+        });
+
     }
 
 
