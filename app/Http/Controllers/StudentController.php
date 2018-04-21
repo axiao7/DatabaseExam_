@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
 
+use Illuminate\Http\Request;
+
 use App\Student;
+use Illuminate\Support\Facades\Storage;
 
 class StudentController extends Controller {
 
@@ -233,6 +236,28 @@ class StudentController extends Controller {
         return 'urlTest';
     }
 
+    public function upload (Request $request) {
+        if($request->isMethod('POST')){
+            // var_dump($_FILES);
+            $file = $request->file('source');
+            // dd($file);
+            //文件是否上传成功
+            if($file->isValid()){
+
+                //文件信息
+                $originalname = $file->getClientOriginalName();
+                $ext = $file->getClientOriginalExtension();
+                $type = $file->getClientMimeType();
+                $realPath = $file->getRealPath();
+                $filename = date('Y-m-d-H-m-s').'-'.uniqid().'.'.$ext;
+                $bool = Storage::disk('uploads')->put($filename, file_get_contents($realPath));
+                var_dump($bool);
+
+            }
+            exit;
+        }
+        return view('student.upload');
+    }
 
 
 

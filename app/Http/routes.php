@@ -104,6 +104,7 @@ Route::any('section1', ['uses' => 'StudentController@section1']);
 
 Route::any('url', ['as' => 'url', 'uses' => 'StudentController@urlTest']);
 
+Route::any('upload', 'StudentController@upload');
 
 
 
@@ -124,3 +125,6 @@ Route::any('url', ['as' => 'url', 'uses' => 'StudentController@urlTest']);
 
 
 
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
