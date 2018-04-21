@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 
 use Illuminate\Http\Request;
@@ -277,6 +278,32 @@ class StudentController extends Controller {
 
     }
 
+    public function cache1 () {
+//        Cache::put('key1', 'val1', 10);
+
+//        $bool = Cache::add('key2', 'val2', 10);
+//        var_dump($bool);
+
+//        Cache::forever('key3', 'val3');
+
+//        if (Cache::has('key1')){
+//            $val = Cache::get('key1');
+//            var_dump($val);
+//        } else {
+//            echo 'No';
+//        }
+    }
+    public function cache2 () {
+
+//        $val = Cache::get('key3');
+//        var_dump($val);
+
+//        $val = Cache::pull('key3');
+//        var_dump($val);
+
+//        $bool = Cache::forget('key1');
+//        var_dump($bool);
+    }
 
 
 

@@ -108,7 +108,9 @@ Route::any('upload', 'StudentController@upload');
 
 Route::any('mail', 'StudentController@mail');
 
+Route::any('cache1', 'StudentController@cache1');
 
+Route::any('cache2', 'StudentController@cache2');
 
 
 
