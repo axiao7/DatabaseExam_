@@ -130,6 +130,15 @@ Route::group(['middleware' => ['web']], function () {
 Route::any('response', 'StudentController@response');
 
 
+Route::any('activity0', 'StudentController@activity0');
+
+Route::group(['middleware' => ['activity']], function () {
+
+    Route::any('activity1', 'StudentController@activity1');
+
+    Route::any('activity2', 'StudentController@activity2');
+
+});
 
 
 
