@@ -302,10 +302,46 @@ class StudentController extends Controller {
 //        var_dump($val);
 
 //        $bool = Cache::forget('key1');
-//        var_dump($bool);
+//        var_dump($bool)
     }
 
+    public function error () {
 
+        $student = null;
+        if($student == null){
+            abort('503');
+        }
+        return view('student.error');
+    }
+
+    public function request1 (Request $request) {
+
+//        echo $request->input('sex', '未知');
+
+//        if ($request->has('name')){
+//            echo $request->input('name');
+//        } else {
+//            echo '无该参数';
+//        }
+
+//        $req = $request->all();
+//        dd($req);
+
+//        echo $request->method();
+
+//        if ($request->isMethod('GET')){
+//            echo 'YES';
+//        } else {
+//            echo 'NO';
+//        }
+
+//        $bool = $request->ajax();
+//        var_dump($bool);
+
+//        $bool = $request->is('student/*');//判断请求路径是否符合特定格式
+//        var_dump($bool);
+        echo $request->url();
+    }
 
 
 }

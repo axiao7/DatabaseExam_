@@ -112,6 +112,9 @@ Route::any('cache1', 'StudentController@cache1');
 
 Route::any('cache2', 'StudentController@cache2');
 
+Route::any('error', 'StudentController@error');
+
+Route::any('request1', 'StudentController@request1');
 
 
 
