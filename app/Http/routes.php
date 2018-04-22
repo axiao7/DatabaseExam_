@@ -116,6 +116,14 @@ Route::any('error', 'StudentController@error');
 
 Route::any('request1', 'StudentController@request1');
 
+Route::group(['middleware' => ['web']], function () {
+
+    Route::any('session1', 'StudentController@session1');
+
+    Route::any('session2', 'StudentController@session2');
+
+});
+
 
 
 

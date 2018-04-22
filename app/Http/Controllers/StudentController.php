@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 
 use App\Student;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
 
 class StudentController extends Controller {
@@ -341,6 +342,78 @@ class StudentController extends Controller {
 //        $bool = $request->is('student/*');//判断请求路径是否符合特定格式
 //        var_dump($bool);
         echo $request->url();
+    }
+
+    public function session1 (Request $req) {
+
+        //http request session
+//        $req->session()->put('key1', 'value1');
+
+        //session 辅助函数
+//        session()->put('key2', 'value2');
+
+        //session 类
+//        Session::put('key3', 'value3');
+
+//        //以数组的形式存储数据
+//        Session::put(['key4' => 'value4']);
+
+//        //把数据放到session中
+//        Session::push('student', 'lwx');
+//        Session::push('student', 'imooc');
+
+//        $res = Session::get('student', 'default');
+//        var_dump($res);
+
+//        //暂存数据
+//        Session::flash('key-flash', 'val-flash');
+
+
+
+    }
+
+    public function session2 (Request $req) {
+
+//        echo $req->session()->get('key1');
+
+//        echo session()->get('key2');
+
+//        //获取session的值
+//        echo Session::get('key4', 'default');
+
+//        echo Session::get('key4', 'default');
+
+//        $res = Session::get('student', 'default');
+//        var_dump($res);
+
+//        //取出数据并删除
+//        $res = Session::pull('student', 'default');
+//        var_dump($res);
+
+//        $res = Session::all();
+//        dd($res);
+
+//        //判断session中某个key是否存在
+//        if (Session::has('key11')){
+//            $res = Session::all();
+//            dd($res);
+//        } else {
+//            echo '额';
+//        }
+
+//        //删除session中指定key
+//        dd(Session::all());
+//        Session::forget('key2');
+//        dd(Session::all());
+
+//        //清空所有session
+//        Session::flush();
+
+//        //获取session所有数据
+//        dd(Session::all());
+
+//        echo Session::get('key-flash');
+
     }
 
 
