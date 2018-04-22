@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
 
+
 class StudentController extends Controller {
 
     public function test1 () {
@@ -414,7 +415,39 @@ class StudentController extends Controller {
 
 //        echo Session::get('key-flash');
 
+        return Session::get('message', '暂无信息');
+//        return 'session2';
+
     }
+
+    public function response () {
+
+//        $data = [
+//            'errCode' => 0,
+//            'errMsg' => 'success',
+//            'data' => 'lwx'
+//        ];
+////        var_dump($data);
+//
+//        //响应json
+//        return response()->json($data);
+
+//        //重定向
+//        return 'session2';
+//        return redirect('session2')->with('message', '我是快闪数据');
+
+//        return redirect()->action('StudentController@session2')
+//                ->with('message', '我是快闪数据');
+
+//        //route()
+//        return redirect()->route('session2')
+//                ->with('message', '我是快闪数据');
+
+//        //返回上个页面
+//        return redirect()->back();
+
+    }
+
 
 
 }
